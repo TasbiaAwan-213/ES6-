@@ -119,23 +119,23 @@
 /////** cal back funtion*/
 
 
-//call back function 
-
+//call back function                     // two value taken.. (1): function (2): time
+                                         // function pass in parameter
 // setInterval(() => console.log("hello"),1000)  //function of js, which is by default
 
 // setTimeout()
 
 
-//**call back function */
+//**call back function */          // data call from API
 
-// let getDAta = ( render_data)=>{       //as a parameter recev
+// let getDAta = ( render_data)=>{    //arrow function(get data)   //(render_data)as a parameter recev
 //     firebase.database().ref('/').on("child_addded",(data)=>{
         
 //         render_data(data.val())
 //     })
 // }
 
-// getDAta(render_data)       //aas a argument pass
+// getDAta(render_data)       //aas a argument pass (get data function ko)
 
 
 // let render_data = (data) => {
@@ -143,13 +143,62 @@
 // }
 
 
-let getData = (render_data) => {
-    setTimeout(()=>{
-        render_data("tasbia")
-    },3000)
-}
-getData(render_data)
+// let getData = (render_data) => {
+   
+//      setTimeout(()=>{
+//         render_data("tasbia")         // after 3sec it will call render data funtion ( and give name data)
+//     },3000)                        // whwn call this funtionn it is bzy for 03 second.
+// }
 
-let render_data = (name) =>{
-    console.log(name)
-}
+// let render_data = (name) =>{
+//     console.log(name)
+// getData(render_data)
+
+// }
+
+
+///**arrry function***//  (also call high-order-function)
+
+
+//*filter function
+let arr =[{ name: "Tasbia", age: 20 }, { name: "tahir" age: 30 }]    //in arry function put two elements which is object
+
+let filter = arr.filter((a)=> console.log(a))   //ar. filter whuch keep in call back function
+
+
+
+//*
+
+let arr =[{ name: "Tasbia", age: 20 }, { name: "tahir" age: 30 }]   
+
+let filter = arr.filter(function (a){
+       return true
+ })
+
+console.log()
+
+
+
+let arr =[{ name: "Tasbia", age: 20 }, { name: "tahir" age: 30 }]   
+
+let filter = arr.filter(function (a){
+       return a.age === 20
+ })
+
+console.log(filter)
+
+// filter using arro funtion
+
+let arr =[{ name: "Tasbia", age: 20 }, { name: "tahir" age: 30 }]   
+
+let filter = arr.filter(function (a => a.age ===20){       //condition
+ })
+console.log(filter)
+
+
+let arr =[{ name: "Tasbia", age: 20 }, { name: "tahir" age: 30 }]   
+
+let filter = arr.filter(function (a => false){        //false pass
+ })
+console.log(filter)      //empty  // false and true 
+
