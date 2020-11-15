@@ -157,10 +157,10 @@
 // }
 
 
-///**arrry function***//  (also call high-order-function)
+///**array function***//  (also call high-order-function)
 
 
-//*filter function
+//* array filter function
 let arr =[{ name: "Tasbia", age: 20 }, { name: "tahir" age: 30 }]    //in arry function put two elements which is object
 
 let filter = arr.filter((a)=> console.log(a))   //ar. filter whuch keep in call back function
@@ -201,4 +201,60 @@ let arr =[{ name: "Tasbia", age: 20 }, { name: "tahir" age: 30 }]
 let filter = arr.filter(function (a => false){        //false pass
  })
 console.log(filter)      //empty  // false and true 
+
+
+
+let arr = [{name: "tasbia", age:20}, {name: "awan" age:30}]
+let filter = arr.filter(a => a.age >10)
+
+console.log(filter)
+                                                //filter use in website  search 
+
+
+
+///****search//****
+
+//stratWith functionality
+let name = "tasbia";
+lat search = "ta"
+ 
+if (name.startsWith(Searcg)){      
+  console.log(name)
+}
+
+//EndsWith functionality
+let name = "tasbia";
+lat search = "a"
+ 
+if (name.endsWith(Searcg)){
+  console.log(name)
+}
+
+
+
+//****Array Map **//function
+//update new array
+
+let arr = [2, 3, 4, 5];
+console.log(arr)
+
+let multiply = arr.map(a => a * 2)      //multiply from 2
+
+console.log(multiply)
+
+//object name
+
+
+let arr = [{name:"tasbia"}, {name: "awan"];
+console.log(arr)
+
+let multiply = arr.map(a => {
+    document.getElementById("table").innerHTML a.name =   //multiply
+   })
+console.log(multiply)
+
+
+
+
+
 
